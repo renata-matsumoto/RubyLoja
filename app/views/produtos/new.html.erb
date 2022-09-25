@@ -9,7 +9,7 @@
     <div class="col-sm-8">
       <div class="form-group">
       <%= form.label :nome %>
-      <%= form.text_field :nome, class:"form-contrl" %>
+      <%= form.text_field :nome, class:"form-control" %>
       </div>
     </div>
   </div>
@@ -18,7 +18,16 @@
     <div class="col-sm-8">
       <div class="form-group">
       <%= form.label :descricao %>
-      <%= form.text_area :descricao, class:"form-contrl", rows: 4 %>
+      <%= form.text_area :descricao, class:"form-control", rows: 4 %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="form-group">
+        <%= form.label :departamento %>
+        <%= form.collection_select :departamento_id, @departamentos, :id, :nome, {}, class:"form-control" %>
       </div>
     </div>
   </div>
@@ -27,7 +36,7 @@
     <div class="col-sm-8">
       <div class="form-group">
       <%= form.label :preco %>
-      <%= form.number_field :preco, step:0.01, class:"form-contrl" %>
+      <%= form.number_field :preco, step:0.01, class:"form-control" %>
       </div>
     </div>
   </div>
@@ -36,7 +45,7 @@
     <div class="col-sm-2">
       <div class="form-group">
       <%= form.label :quantidade %>
-      <%= form.number_field :quantidade, class:"form-contrl" %>
+      <%= form.number_field :quantidade, class:"form-control" %>
       </div>
     </div>
   </div>
