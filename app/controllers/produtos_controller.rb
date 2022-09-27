@@ -1,7 +1,7 @@
 class ProdutosController < ApplicationController
 
-  before_action :set_produto, only: [:edit,:update, :destroy]
 
+  before_action :set_produto, only: %i[ edit update destroy ]
 
   def index
       @produto = Produto.order(nome: :asc).limit 6
